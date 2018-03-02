@@ -12,7 +12,7 @@ class _Day1PageState extends State<Day1Page> {
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
-        title: new Text('Home'),
+        title: new Text('Day One'),
       ),
       body: new Center(
           child: new Text('This is the day 1 page!')

@@ -83,7 +83,7 @@ class _LoginPageState extends State<LoginPage> {
                           return validate(value, 'Password', [
                             new RequiredValidator(),
                             new StringValidator(),
-                            new MinValidator(8)
+                            new MinValidator(6)
                           ]);
                         },
                         onSaved: (String value) {
