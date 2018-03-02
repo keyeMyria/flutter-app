@@ -20,15 +20,21 @@ class _HomePageState extends State<HomePage> {
           new Container(
               child: new RaisedButton(
                   onPressed: () {
-                    navigate(context, 'about');
+                    navigate(context, 'day1');
                   },
-                  child: new Text('About'))),
+                  child: new Text('Day 1'))),
           new Container(
               child: new RaisedButton(
                   onPressed: () {
-                    navigate(context, 'about');
+                    navigate(context, 'day2');
                   },
-                  child: new Text('Outra coisa')))
+                  child: new Text('Day 2'))),
+          new Container(
+              child: new RaisedButton(
+                  onPressed: () {
+                    navigate(context, 'day3');
+                  },
+                  child: new Text('Day 3')))
         ],
       ),
     );

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AboutPage extends StatefulWidget {
+class Day2Page extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new _AboutPageState();
+    return new _Day2PageState();
   }
 }
 
-class _AboutPageState extends State<AboutPage> {
+class _Day2PageState extends State<Day2Page> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -15,7 +15,7 @@ class _AboutPageState extends State<AboutPage> {
         title: new Text('Home'),
       ),
       body: new Center(
-          child: new Text('This is the about page!')
+          child: new Text('This is the day 2 page!')
       ),
     );
   }

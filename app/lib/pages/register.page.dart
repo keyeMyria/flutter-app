@@ -15,9 +15,7 @@ class _RegisterPageState extends State<RegisterPage> {
         title: new Text('Register'),
       ),
       body: new SingleChildScrollView(
-        child: new Center(
-          child: new Text('Register Page!')
-        ),
+        child: new Center(child: new Text('Register Page!')),
       ),
     );
   }

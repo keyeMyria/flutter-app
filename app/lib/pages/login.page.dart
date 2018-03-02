@@ -26,16 +26,12 @@ class _LoginPageState extends State<LoginPage> {
     if (_formKey.currentState.validate()) {
       _formKey.currentState.save();
 
-      print('Printing the submitted data.');
-      print('Email: ${data.email}');
-      print('Password: ${data.password}');
-
-      if(data.email == "hygorzorak@gmail.com" && data.password == "qwe123@") {
+      // TODO apply google oauth
+      if (data.email == "hygorzorak@gmail.com" && data.password == "qwe123@") {
         redirect(context, 'home');
       } else {
         print('Invalid credentials...');
       }
-
     }
   }
 
@@ -49,17 +45,12 @@ class _LoginPageState extends State<LoginPage> {
           children: <Widget>[
             new Container(
               height: screenSize.height / 3,
-              padding: new EdgeInsets.only(
-                bottom: 20.0
-              ),
-              color: Colors.blue,
+              padding: new EdgeInsets.only(bottom: 20.0),
+              color: Colors.red,
               alignment: Alignment.bottomCenter,
               child: new Text(
-                'App',
-                style: new TextStyle(
-                  fontSize: 36.0,
-                  color: Colors.white
-                ),
+                'Gym Time',
+                style: new TextStyle(fontSize: 36.0, color: Colors.white),
               ),
             ),
             new Container(
@@ -69,68 +60,58 @@ class _LoginPageState extends State<LoginPage> {
                 child: new Column(
                   children: <Widget>[
                     new TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      decoration: new InputDecoration(
-                        hintText: 'you@example.com',
-                        labelText: 'E-mail Address'
-                      ),
-                      validator: (String value) {
-                        return validate(value, 'E-mail Address', [
-                          new RequiredValidator(),
-                          new EmailValidator(),
-                          new MaxValidator(63)
-                        ]);
-                      },
-                      onSaved: (String value) {
-                        data.email = value;
-                      }
-                    ),
+                        keyboardType: TextInputType.emailAddress,
+                        decoration: new InputDecoration(
+                            hintText: 'you@example.com',
+                            labelText: 'E-mail Address'),
+                        validator: (String value) {
+                          return validate(value, 'E-mail Address', [
+                            new RequiredValidator(),
+                            new EmailValidator(),
+                            new MaxValidator(63)
+                          ]);
+                        },
+                        onSaved: (String value) {
+                          data.email = value;
+                        }),
                     new TextFormField(
-                      obscureText: true,
-                      decoration: new InputDecoration(
-                        hintText: 'you@example.com',
-                        labelText: 'Enter your password'
-                      ),
-                      validator: (String value) {
-                        return validate(value, 'Password', [
-                          new RequiredValidator(),
-                          new StringValidator(),
-                          new MinValidator(8)
-                        ]);
-                      },
-                      onSaved: (String value) {
-                        data.password = value;
-                      }
-                    ),
+                        obscureText: true,
+                        decoration: new InputDecoration(
+                            hintText: 'you@example.com',
+                            labelText: 'Enter your password'),
+                        validator: (String value) {
+                          return validate(value, 'Password', [
+                            new RequiredValidator(),
+                            new StringValidator(),
+                            new MinValidator(8)
+                          ]);
+                        },
+                        onSaved: (String value) {
+                          data.password = value;
+                        }),
                     new Container(
                       width: screenSize.width,
                       child: new RaisedButton(
                         child: new Text(
-                          'Login',
-                          style: new TextStyle(
-                            color: Colors.white
-                          ),
+                          'LOGIN',
+                          style: new TextStyle(color: Colors.white),
                         ),
                         onPressed: () => this.submit(context),
-                        color: Colors.blue,
+                        color: Colors.red,
                       ),
-                      margin: new EdgeInsets.only(
-                        top: 20.0
-                      ),
+                      margin: new EdgeInsets.only(top: 20.0),
                     ),
                     new Container(
                       width: screenSize.width,
                       child: new FlatButton(
                         child: new Text(
-                          'Register for App',
+                          'or REGISTER',
                         ),
                         onPressed: () {
                           navigate(context, 'register');
                         },
                       ),
-                      margin: new EdgeInsets.only(
-                        top: 20.0
-                      ),
+                      margin: new EdgeInsets.only(top: 20.0),
                     )
                   ],
                 ),

@@ -5,11 +5,13 @@ import 'package:flutter/material.dart';
 
 class AuthRoutes {
   AuthRoutes(Router router) {
-    router.define('login', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    router.define('login', handler: new Handler(
+        handlerFunc: (BuildContext context, Map<String, dynamic> params) {
       return new LoginPage();
     }));
 
-    router.define('register', handler: new Handler(handlerFunc: (BuildContext context, Map<String, dynamic> params) {
+    router.define('register', handler: new Handler(
+        handlerFunc: (BuildContext context, Map<String, dynamic> params) {
       return new RegisterPage();
     }));
   }
