@@ -30,7 +30,12 @@ class _LoginPageState extends State<LoginPage> {
       print('Email: ${data.email}');
       print('Password: ${data.password}');
 
-      redirect(context, 'home');
+      if(data.email == "hygorzorak@gmail.com" && data.password == "qwe123@") {
+        redirect(context, 'home');
+      } else {
+        print('Invalid credentials...');
+      }
+
     }
   }
 

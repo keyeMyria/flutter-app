@@ -15,10 +15,21 @@ class _HomePageState extends State<HomePage> {
       appBar: new AppBar(
         title: new Text('Home'),
       ),
-      body: new Center(
-          child: new RaisedButton(onPressed: () {
-            navigate(context, 'about');
-          }, child: new Text('About'))
+      body: new Row(
+        children: <Widget>[
+          new Container(
+              child: new RaisedButton(
+                  onPressed: () {
+                    navigate(context, 'about');
+                  },
+                  child: new Text('About'))),
+          new Container(
+              child: new RaisedButton(
+                  onPressed: () {
+                    navigate(context, 'about');
+                  },
+                  child: new Text('Outra coisa')))
+        ],
       ),
     );
   }
